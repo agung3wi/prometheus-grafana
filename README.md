@@ -1,1 +1,1 @@
-# Promotheus Grafana
+# Prometheus Grafana
