@@ -1,11 +1,11 @@
 #!/bin/bash
 wget https://github.com/prometheus/alertmanager/releases/download/v0.21.0/alertmanager-0.21.0.linux-amd64.tar.gz
 tar -xzf alertmanager-0.21.0.linux-amd64.tar.gz
-cd alertmanager-0.21.0.linux-amd64/
-cp ./alertmanager /usr/local/bin/
-cp /usr/local/bin/alertmanager/alertmanager.yml /etc/prometheus/alertmanager.yml
-mkdir -p /etc/prometheus
+cp ./alertmanager-0.21.0.linux-amd64/alertmanager /usr/local/bin/
+rm -Rf alertmanager-0.21.0.linux-amd64
+rm -Rf alertmanager-0.21.0.linux-amd64.tar.gz
 
+mkdir -p /etc/prometheus
 cat <<EOF >/etc/prometheus/alertmanager.yml
 global:
   resolve_timeout: 5m

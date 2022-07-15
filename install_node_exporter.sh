@@ -3,6 +3,8 @@
 wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
 tar xzf node_exporter-1.3.1.linux-amd64.tar.gz
 sudo mv -v node_exporter-1.3.1.linux-amd64/node_exporter /usr/local/bin/
+rm -Rf node_exporter-1.3.1.linux-amd64.tar.gz
+rm -Rf node_exporter-1.3.1.linux-amd64
 
 cat <<EOF >/etc/systemd/system/node-exporter.service
 [Unit]
